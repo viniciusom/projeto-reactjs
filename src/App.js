@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
 import './App.css';
 import Tabela from './Tabela';
 import Form from './Formulario';
+import Header from './Header';
 
 class App extends Component {
   state = {
@@ -53,12 +55,13 @@ class App extends Component {
   render() {
     return (
       <>
+        <Header/>
+        <div className="container mb-10">
         <Tabela autores = { this.state.autores } removeAutor = { this.removeAutor } />
         <Form handlerSubmit = {this.handlerSubmit} />
+        </div>
       </>
     );
-  }
-  
+  } 
 }
-
 export default App;

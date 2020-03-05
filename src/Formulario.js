@@ -26,36 +26,42 @@ class Formulario extends Component {
   }
 
   render() {
-
     const { nome, livro, preco } = this.state;
-
     return (
       <form>
-        <label htmlFor="nome">Nome</label>
-        <input
-          id="nome"
-          type="text"
-          name="nome"
-          value={nome}
-          onChange={this.handlerFunction}
-        />
-        <label htmlFor="livro">Livro</label>
-        <input
-          id="livro"
-          type="text"
-          name="livro"
-          value={livro}
-          onChange={this.handlerFunction}
-        />
-        <label htmlFor="preco">Preço</label>
-        <input
-          id="preco"
-          type="text"
-          name="preco"
-          value={preco}
-          onChange={this.handlerFunction}
-        />
-        <button onClick={this.submitFormulario} type="button">Salvar
+        <div className="row">
+          <div className="input-field col s4">
+            <label className="input-field" htmlFor="nome">Nome</label>
+            <input
+              id="nome"
+              type="text"
+              name="nome"
+              value={nome}
+              onChange={this.handlerFunction}
+            />
+          </div>
+          <div className="input-field col s4">
+            <label className="input-field" htmlFor="livro">Livro</label>
+            <input
+              id="livro"
+              type="text"
+              name="livro"
+              value={livro}
+              onChange={this.handlerFunction}
+            />
+          </div>
+          <div className="input-field col s4">
+            <label className="input-field" htmlFor="preco">Preço</label>
+            <input
+              id="preco"
+              type="text"
+              name="preco"
+              value={preco}
+              onChange={this.handlerFunction}
+            />
+          </div>
+        </div>
+        <button onClick={this.submitFormulario} type="button" className="waves-effect waves-light indigo lighten-2 btn">Salvar
         </button>
       </form>
     );
